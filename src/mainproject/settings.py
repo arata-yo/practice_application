@@ -133,7 +133,19 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+# STATIC_URL = '/static/'
+# 変更点
+# All applications can use Static files of this directory
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "mainproject/static/"),
+)
+
+# Collectstatic command put STATICFILES_DIRS and each application's Static files together into this directory
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+# Django template files read this directory to use Static files(example {% static 'style.css' %})
 STATIC_URL = '/static/'
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
