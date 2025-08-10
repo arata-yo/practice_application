@@ -1,1 +1,2 @@
 # practice_application
+趣味Webアプリケーションの作成
