@@ -39,5 +39,6 @@ services:
       POSTGRES_PASSWORD: "test"
       POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --locale=C"
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      # - pgdata:/var/lib/postgresql/data
+      - ./dbdata:/var/lib/postgresql/data
     hostname: postgres
