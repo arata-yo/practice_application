@@ -898,3 +898,62 @@ uWSGI running as root, you can use --uid/--gid/--chroot options
 gracefully (RE)spawned uWSGI master process (pid: 1)
 spawned uWSGI worker 1 (pid: 23, cores: 1)
 Python auto-reloader enabled
+[pid: 23|app: 0|req: 1/1] 172.20.0.1 () {56 vars in 1012 bytes} [Mon Aug 11 07:55:57 2025] GET /app/ => generated 451 bytes in 699 msecs (HTTP/1.1 200) 5 headers in 166 bytes (1 switches on core 0)
+[pid: 23|app: 0|req: 2/2] 172.20.0.1 () {56 vars in 1012 bytes} [Mon Aug 11 07:56:14 2025] GET /app/ => generated 451 bytes in 28 msecs (HTTP/1.1 200) 5 headers in 166 bytes (1 switches on core 0)
+[pid: 23|app: 0|req: 3/3] 172.20.0.1 () {56 vars in 1012 bytes} [Mon Aug 11 07:58:14 2025] GET /app/ => generated 451 bytes in 181 msecs (HTTP/1.1 200) 5 headers in 166 bytes (1 switches on core 0)
+[pid: 23|app: 0|req: 4/4] 172.20.0.1 () {54 vars in 979 bytes} [Mon Aug 11 08:18:35 2025] GET /app => generated 0 bytes in 180 msecs (HTTP/1.1 301) 5 headers in 173 bytes (1 switches on core 0)
+[pid: 23|app: 0|req: 5/5] 172.20.0.1 () {54 vars in 981 bytes} [Mon Aug 11 08:18:35 2025] GET /app/ => generated 451 bytes in 319 msecs (HTTP/1.1 200) 5 headers in 166 bytes (1 switches on core 0)
+[uwsgi-python-reloader] module/file ./app/views.py has been modified
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 23)...
+worker 1 buried after 2 seconds
+binary reloading uWSGI...
+chdir() to /code
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (:8001)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from /code/mainproject/django.ini
+*** Starting uWSGI 2.0.30 (64bit) on [Mon Aug 11 08:28:27 2025] ***
+compiled with version: 12.2.0 on 10 August 2025 08:55:24
+os: Linux-5.15.167.4-microsoft-standard-WSL2 #1 SMP Tue Nov 5 00:21:55 UTC 2024
+nodename: c59b46171162
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 8
+current working directory: /code
+detected binary path: /usr/local/bin/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address :8001 fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.7.17 (default, Sep 20 2023, 11:53:41)  [GCC 12.2.0]
+Python main interpreter initialized at 0x5633590e6130
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145840 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x5633590e6130 pid: 1 (default app)
+mountpoint  already configured. skip.
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1)
+spawned uWSGI worker 1 (pid: 25, cores: 1)
+Python auto-reloader enabled
+[pid: 25|app: 0|req: 1/1] 172.20.0.1 () {54 vars in 979 bytes} [Mon Aug 11 08:29:10 2025] GET /app => generated 0 bytes in 21 msecs (HTTP/1.1 301) 5 headers in 173 bytes (1 switches on core 0)
+[pid: 25|app: 0|req: 2/2] 172.20.0.1 () {54 vars in 981 bytes} [Mon Aug 11 08:29:11 2025] GET /app/ => generated 451 bytes in 267 msecs (HTTP/1.1 200) 5 headers in 166 bytes (1 switches on core 0)
+Not Found: /apps
+[pid: 25|app: 0|req: 3/3] 172.20.0.1 () {54 vars in 981 bytes} [Mon Aug 11 08:29:20 2025] GET /apps => generated 2198 bytes in 16 msecs (HTTP/1.1 404) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 25|app: 0|req: 4/4] 172.20.0.1 () {54 vars in 981 bytes} [Mon Aug 11 08:29:22 2025] GET /app/ => generated 451 bytes in 28 msecs (HTTP/1.1 200) 5 headers in 166 bytes (1 switches on core 0)
+[pid: 25|app: 0|req: 5/5] 172.20.0.1 () {56 vars in 1012 bytes} [Mon Aug 11 08:50:22 2025] GET /app/ => generated 1829 bytes in 326 msecs (HTTP/1.1 200) 5 headers in 167 bytes (1 switches on core 0)
+[pid: 25|app: 0|req: 6/6] 172.20.0.1 () {56 vars in 1034 bytes} [Mon Aug 11 08:50:36 2025] GET /app/4/ => generated 638 bytes in 29 msecs (HTTP/1.1 200) 5 headers in 166 bytes (1 switches on core 0)
+[pid: 25|app: 0|req: 7/7] 172.20.0.1 () {56 vars in 1034 bytes} [Mon Aug 11 08:52:38 2025] GET /app/4/ => generated 638 bytes in 297 msecs (HTTP/1.1 200) 5 headers in 166 bytes (1 switches on core 0)
